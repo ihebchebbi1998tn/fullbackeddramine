@@ -1,0 +1,25 @@
+
+
+/* Videos.css */
+.drop-zone {
+    border: 2px dashed #007bff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.drop-zone:hover {
+    background-color: #f8f9fa; /* Light gray on hover */
+}
+
+.drop-zone-text {
+    margin: 0;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.file-input {
+    display: none; /* Ensure the file input is not visible */
+}

@@ -1,0 +1,178 @@
+.content {
+    padding: 20px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 videos per row */
+    gap: 20px;
+}
+
+.video-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.video-card:hover {
+    transform: scale(1.03);
+}
+
+.thumbnail-container {
+    position: relative;
+    height: 200px; /* Fixed height for uniformity */
+    overflow: hidden; /* Ensures overflow is hidden */
+    background-color: #333;
+}
+
+.thumbnail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area */
+    transform: translate(-50%, -50%); /* Center the image */
+}
+
+.video-details {
+    padding: 15px;
+}
+
+.video-details h5 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.video-details p {
+    color: #777;
+    font-size: 14px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-button {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.page-button.active,
+.page-button:hover {
+    background-color: #2596be;
+    color: #fff;
+}
+
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.video-player-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.delete-button {
+    position: absolute;
+    top: 10px; /* Adjust as necessary */
+    right: 10px; /* Adjust as necessary */
+    background: none;
+    border: none;
+    color: #2596be; /* Or any color you prefer */
+    cursor: pointer;
+    font-size: 24px; /* Adjust size as necessary */
+}
+
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #000; /* Spinner color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.custom-button {
+    background-color: #2596be;
+    color: white;
+    border: none;
+}
+/* Add this media query for mobile devices */
+@media (max-width: 1000px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 videos per row on mobile */
+    }
+}
